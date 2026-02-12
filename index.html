@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Myanmar - The Golden Land</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Header with Navigation -->
+    <header id="home">
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-pagoda"></i>
+                    <span id="logo-text">မြန်မာခရီးသွား</span>
+                </div>
+                
+                <div class="nav-right">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn" data-lang="my" title="မြန်မာဘာသာ">
+                            <span class="lang-text">မြန်မာ</span>
+                        </button>
+                        <button class="lang-btn active" data-lang="ja" title="日本語">
+                            <span class="lang-text">日本語</span>
+                        </button>
+                        <button class="lang-btn" data-lang="en" title="English">
+                            <span class="lang-text">English</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <!-- Navigation Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#home" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span class="nav-text" data-key="navHome">ပင်မစာမျက်နှာ</span>
+                        </a></li>
+                        <li><a href="#about" class="nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="nav-text" data-key="navAbout">မြန်မာနိုင်ငံအကြောင်း</span>
+                        </a></li>
+                        <li><a href="#destinations" class="nav-link">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span class="nav-text" data-key="navDestinations">ခရီးသွားစရာနေရာများ</span>
+                        </a></li>
+                        <li><a href="#culture" class="nav-link">
+                            <i class="fas fa-landmark"></i>
+                            <span class="nav-text" data-key="navCulture">ယဉ်ကျေးမှု</span>
+                        </a></li>
+                        <li><a href="#statistics" class="nav-link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span class="nav-text" data-key="navStatistics">စာရင်းဇယားများ</span>
+                        </a></li>
+                        <li><a href="#contact" class="nav-link">
+                            <i class="fas fa-envelope"></i>
+                            <span class="nav-text" data-key="navContact">ဆက်သွယ်ရန်</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Content -->
+        <div class="header-content">
+            <h1 class="typing-text" data-key="headerTitle">မြန်မာကိုရှာဖွေပါ</h1>
+            <p class="tagline" data-key="headerTagline">ထာဝရအလှနှင့်ရှေးဟောင်းဓလေ့ထုံးတမ်းများ၏ရွှေရောင်မြေ</p>
+            <div class="header-buttons">
+                <a href="#destinations" class="btn pulse" data-key="headerButton1">
+                    <i class="fas fa-compass"></i>
+                    <span>စတင်လေ့လာမည်</span>
+                </a>
+                <button id="watchVideo" class="btn-outline" data-key="headerButton2">
+                    <i class="fas fa-play"></i>
+                    <span>ဗီဒီယိုကြည့်မည်</span>
+                </button>
+            </div>
+            
+            <!-- Weather Widget -->
+            <div class="weather-card fade-in-up">
+                <div class="weather-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="weather-info">
+                    <h4 data-key="weatherCity">ရန်ကုန်</h4>
+                    <p class="temperature">32°C</p>
+                    <p class="weather-condition" data-key="weatherCondition">နေသာသည်</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-key="aboutTitle">
+                <i class="fas fa-star"></i>
+                <span>မြန်မာနိုင်ငံအကြောင်း</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-text fade-in-left">
+                    <p data-key="aboutText1">မြန်မာနိုင်ငံသည် အိန္ဒိယ၊ ဘင်္ဂလားဒေ့ရှ်၊ တရုတ်၊ လာအို၊ ထိုင်းနိုင်ငံများနှင့် နယ်နိမိတ်ချင်း ထိစပ်နေသော အရှေ့တောင်အာရှနိုင်ငံတစ်ခုဖြစ်ပြီး တိုင်းရင်းသားလူမျိုး ၁၀၀ ကျော်နေထိုင်ပါသည်။ ရှေးဟောင်းစေတီပုထိုးများ၊ မပျက်စီးသေးသော ပင်လယ်ကမ်းခြေများနှင့် လူလက်မထပ်ရသေးသော ရှုခင်းများဖြင့် အခြားနေရာများနှင့်မတူသော ခရီးသွားအတွေ့အကြုံကို ပေးစွမ်းနိုင်ပါသည်။</p>
+                    <p data-key="aboutText2">ပုဂံ၏စေတီပုထိုးများ၊ အင်းလေးကန်၏ရေပေါ်ခြံများ၊ ရန်ကုန်၏ကိုလိုနီခေတ်အဆောက်အအုံများမှ ကျိုက်ထီးရိုးရွှေရောင်ကျောက်ဆောင်အထိ မြန်မာနိုင်ငံသည် အံ့ဖွယ်အလှတရားများနှင့် ကြွယ်ဝသောယဉ်ကျေးမှုအမွေအနှစ်များရှိသောနိုင်ငံဖြစ်ပါသည်။</p>
+                    <p data-key="aboutText3">ကျွန်ုပ်တို့၏ရည်ရွယ်ချက်မှာ ဒေသခံလူထုအတွက် အကျိုးပြုသော တာဝန်ယူမှုရှိသော ခရီးသွားလုပ်ငန်းကိုမြှင့်တင်ရင်း မြန်မာနိုင်ငံ၏စစ်မှန်သောအလှ၊ လူမျိုးများ၊ ဓလေ့ထုံးတမ်းများကို ရှာဖွေတွေ့ရှိရန်ကူညီရန်ဖြစ်ပါသည်။</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span data-key="feature1">ကြွယ်ဝသောယဉ်ကျေးမှု</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mountain"></i>
+                            <span data-key="feature2">လှပသောရှုခင်းများ</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <span data-key="feature3">အံ့ဖွယ်အစားအစာများ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in-right">
+                    <div class="image-container">
+                        <img src="images/yangon1.jpg" alt="Bagan" id="mainImage" 
+                             onerror="this.src='https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        <div class="image-controls">
+                            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="image-caption">
+                        <p data-key="imageCaption">ရွှေတိဂုံစေတီတော် - ရန်ကုန်</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2 class="section-title" data-key="destinationsTitle">
+                <i class="fas fa-map-pin"></i>
+                <span>သွားရောက်သင့်သောနေရာများ</span>
+            </h2>
+            <div class="destination-controls">
+                <button class="filter-btn active" data-filter="all" data-key="filterAll">အားလုံး</button>
+                <button class="filter-btn" data-filter="temple" data-key="filterTemples">စေတီပုထိုးများ</button>
+                <button class="filter-btn" data-filter="nature" data-key="filterNature">သဘာဝ</button>
+                <button class="filter-btn" data-filter="city" data-key="filterCities">မြို့ကြီးများ</button>
+            </div>
+            <div class="destination-grid">
+                <!-- Bagan Card -->
+                <div class="destination-card" data-category="temple">
+                    <div class="destination-image">
+                        <img src="images/m1.jpg" alt="Bagan"
+                             onerror="this.src='https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        <div class="destination-overlay">
+                            <span class="category-badge" data-key="filterTemples">စေတီပုထိုးများ</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                    <div class="destination-info">
+                        <h3 data-key="baganTitle">ပုဂံ</h3>
+                        <p data-key="baganDesc">ကမ္ဘာ့အံ့ဖွယ်ရှေးဟောင်းသုတေသနနေရာတစ်ခုဖြစ်သော ပုဂံပြင်ပြင်တွင် ရှေးဟောင်းစေတီပုထိုး ၂,၀၀၀ ကျော်ကို လေ့လာပါ။</p>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-clock"></i> <span data-key="baganDays">၃-၄ ရက်</span></span>
+                            <span><i class="fas fa-dollar-sign"></i> <span data-key="baganPrice">$$$</span></span>
+                        </div>
+                        <button class="btn-detail" data-key="viewDetails">
+                            <i class="fas fa-info-circle"></i>
+                            <span>အသေးစိတ်ကြည့်ရန်</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Inle Lake Card -->
+                <div class="destination-card" data-category="nature">
+                    <div class="destination-image">
+                        <img src="images/inle-01.jpg" alt="Inle Lake"
+                             onerror="this.src='https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        <div class="destination-overlay">
+                            <span class="category-badge" data-key="filterNature">သဘာဝ</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                    <div class="destination-info">
+                        <h3 data-key="inleTitle">အင်းလေးကန်</h3>
+                        <p data-key="inleDesc">အင်းလေးကန်ပေါ်တွင် နေထိုင်ကြသော အင်းသားလူမျိုးတို့၏ ထူးခြားသောယဉ်ကျေးမှုကို လေ့လာပါ။ ရေပေါ်ခြံများနှင့် ခြေထောက်ဖြင့်လှော်ခတ်သော ငါးဖမ်းသမားများနှင့် ကျော်ကြားသည်။</p>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-clock"></i> <span data-key="inleDays">၂-၃ ရက်</span></span>
+                            <span><i class="fas fa-dollar-sign"></i> <span data-key="inlePrice">$$</span></span>
+                        </div>
+                        <button class="btn-detail" data-key="viewDetails">
+                            <i class="fas fa-info-circle"></i>
+                            <span>အသေးစိတ်ကြည့်ရန်</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Yangon Card -->
+                <div class="destination-card" data-category="city">
+                    <div class="destination-image">
+                        <img src="images/Yangon.jpg" alt="Yangon"
+                             onerror="this.src='https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        <div class="destination-overlay">
+                            <span class="category-badge" data-key="filterCities">မြို့ကြီးများ</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                        </div>
+                    </div>
+                    <div class="destination-info">
+                        <h3 data-key="yangonTitle">ရန်ကုန်</h3>
+                        <p data-key="yangonDesc">ကိုလိုနီခေတ်ဗိသုကာလက်ရာများ၊ စည်ကားသောဈေးများနှင့် ခမ်းနားထည်ဝါသော ရွှေတိဂုံစေတီတော်တို့ဖြင့် စည်ကားသောယခင်မြို့တော်ကို လေ့လာပါ။</p>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-clock"></i> <span data-key="yangonDays">၂-၃ ရက်</span></span>
+                            <span><i class="fas fa-dollar-sign"></i> <span data-key="yangonPrice">$$</span></span>
+                        </div>
+                        <button class="btn-detail" data-key="viewDetails">
+                            <i class="fas fa-info-circle"></i>
+                            <span>အသေးစိတ်ကြည့်ရန်</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mandalay Card -->
+                
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture" class="culture">
+        <div class="container">
+            <h2 class="section-title" data-key="cultureTitle">
+                <i class="fas fa-landmark"></i>
+                <span>မြန်မာ့ယဉ်ကျေးမှု</span>
+            </h2>
+            <div class="culture-content">
+                <p class="culture-intro" data-key="cultureIntro">မြန်မာ့ယဉ်ကျေးမှုသည် ဗုဒ္ဓဘာသာမှ လွှမ်းမိုးမှုကြီးမားပြီး လူဦးရေ၏ ၉၀% ကျော်သည် ထေရဝါဒဗုဒ္ဓဘာသာကို ကိုးကွယ်ကြသည်။ နိုင်ငံ၏ကြွယ်ဝသောဓလေ့ထုံးတမ်းများ၊ ပွဲတော်များနှင့် နေထိုင်မှုပုံစံသည် ဤဝိညာဉ်ရေးရာအမွေအနှစ်ကို ထင်ဟပ်စေပါသည်။</p>
+                
+                <div class="culture-highlights">
+                    <div class="culture-item fade-in-up">
+                        <div class="culture-icon">
+                            <i class="fas fa-pagoda"></i>
+                        </div>
+                        <h3 data-key="culture1Title">ဝိညာဉ်ရေးရာ</h3>
+                        <p data-key="culture1Desc">ရွှေစေတီပုထိုးများမှ နံနက်စောစော ဆွမ်းကပ်ခြင်းအခမ်းအနားများအထိ ဝိညာဉ်ရေးရာသည် မြန်မာနိုင်ငံ၏နေ့စဉ်ဘဝတွင် နက်ရှိုင်းစွာစိမ့်ဝင်နေပါသည်။</p>
+                        <button class="culture-more" data-key="learnMore">
+                            <span>ပိုမိုလေ့လာရန်</span>
+                        </button>
+                    </div>
+                    <div class="culture-item fade-in-up">
+                        <div class="culture-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 data-key="culture2Title">အစားအစာ</h3>
+                        <p data-key="culture2Desc">မြန်မာ့အစားအစာသည် အိမ်နီးချင်းနိုင်ငံများမှ အရသာများကို ဒေသခံပစ္စည်းများနှင့် ရောစပ်ထားခြင်းဖြစ်ပါသည်။</p>
+                        <button class="culture-more" data-key="learnMore">
+                            <span>ပိုမိုလေ့လာရန်</span>
+                        </button>
+                    </div>
+                    <div class="culture-item fade-in-up">
+                        <div class="culture-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3 data-key="culture3Title">ရိုးရာအဝတ်အစား</h3>
+                        <p data-key="culture3Desc">လုံချည်ကို အမျိုးသား၊ အမျိုးသမီးနှစ်မျိုးလုံးက ၀တ်ဆင်ကြပြီး သနပ်ခါးကို အလှကုန်နှင့် နေလောင်ကာခရင်မ်အဖြစ် အသုံးပြုကြပါသည်။</p>
+                        <button class="culture-more" data-key="learnMore">
+                            <span>ပိုမိုလေ့လာရန်</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics">
+        <div class="container">
+            <h2 class="section-title" data-key="statisticsTitle">
+                <i class="fas fa-chart-line"></i>
+                <span>ဂဏန်းများဖြင့်မြန်မာနိုင်ငံ</span>
+            </h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-pagoda"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="2500">0</h3>
+                    <p data-key="stat1Title">ပုဂံရှိ ရှေးဟောင်းစေတီပုထိုးအရေအတွက်</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="135">0</h3>
+                    <p data-key="stat2Title">တိုင်းရင်းသားလူမျိုးများ</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="12">0</h3>
+                    <p data-key="stat3Title">ရိုးရာပွဲတော်များ</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="1200">0</h3>
+                    <p data-key="stat4Title">ကမ်းရိုးတန်းအရှည်</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-key="contactTitle">
+                <i class="fas fa-envelope"></i>
+                <span>ဆက်သွယ်ရန်</span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in-left">
+                    <h3 data-key="contactHeading">ဆက်သွယ်ရန်</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-key="contactAddress">လိပ်စာ</h4>
+                            <p data-key="contactAddressText">မြန်မာနိုင်ငံ၊ ရန်ကုန်မြို့၊ ကုန်သည် လမ်း အမှတ် ၁၂၃</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-key="contactPhone">ဖုန်းနံပါတ်</h4>
+                            <p data-key="contactPhoneText">+၉၅ ၁ ၂၃၄ ၅၆၇၈</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-key="contactEmail">အီးမေးလ်</h4>
+                            <p data-key="contactEmailText">info@myanmartravel.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4 data-key="contactHours">အလုပ်ချိန်</h4>
+                            <p data-key="contactHoursText">တနင်္လာမှ သောကြာ: ၉:၀၀ မနက် - ၆:၀၀ ညနေ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" data-key="formName" placeholder="အမည်" required>
+                            <div class="error-message" id="name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" data-key="formEmail" placeholder="အီးမေးလ်" required>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" data-key="formSubject" placeholder="ခေါင်းစဉ်" required>
+                            <div class="error-message" id="subject-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" data-key="formMessage" placeholder="မက်ဆေ့ဂျာ" rows="5" required></textarea>
+                            <div class="error-message" id="message-error"></div>
+                        </div>
+                        <button type="submit" class="btn submit-btn" data-key="formButton">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>မက်ဆေ့ဂျာပို့ရန်</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-pagoda"></i>
+                        <span id="footer-logo-text">မြန်မာခရီးသွား</span>
+                    </div>
+                    <p data-key="footerDesc">မြန်မာနိုင်ငံ၏စစ်မှန်သောအလှနှင့်ယဉ်ကျေးမှုကို ရှာဖွေတွေ့ရှိရန်အတွက် ယုံကြည်စိတ်ချရသောလမ်းညွှန်။</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="quickLinks">အမြန်လင့်ခ်များ</h3>
+                    <ul>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> <span data-key="navAbout">မြန်မာနိုင်ငံအကြောင်း</span></a></li>
+                        <li><a href="#destinations"><i class="fas fa-chevron-right"></i> <span data-key="navDestinations">ခရီးသွားစရာနေရာများ</span></a></li>
+                        <li><a href="#culture"><i class="fas fa-chevron-right"></i> <span data-key="navCulture">ယဉ်ကျေးမှု</span></a></li>
+                        <li><a href="#statistics"><i class="fas fa-chevron-right"></i> <span data-key="navStatistics">စာရင်းဇယားများ</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="contactInfo">ဆက်သွယ်ရန်အချက်အလက်</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-key="contactAddressText">ရန်ကုန်၊ မြန်မာနိုင်ငံ</span></li>
+                        <li><i class="fas fa-phone"></i> <span data-key="contactPhoneText">+၉၅ ၁၂၃ ၄၅၆ ၇၈၉</span></li>
+                        <li><i class="fas fa-envelope"></i> <span data-key="contactEmailText">info@myanmartravel.com</span></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="newsletter">သတင်းလွှာ</h3>
+                    <p data-key="newsletterText">မြန်မာခရီးသွားအကြံပြုချက်များနှင့် ကမ်းလှမ်းချက်များအတွက် စာရင်းသွင်းပါ။</p>
+                    <form id="newsletterForm">
+                        <input type="email" data-key="newsletterPlaceholder" placeholder="အီးမေးလ်" required>
+                        <button type="submit" class="btn" data-key="subscribe">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                
+                <p class="creator">Hein Htet Aung, ib250403</p>
+                <p id="currentTime"><i class="fas fa-clock"></i> <span data-key="currentTime">မြန်မာစံတော်ချိန်:</span> <span id="timeDisplay">ဖွင့်နေသည်...</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zLJCJeVdvks" 
+                        title="Myanmar Travel Video" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
