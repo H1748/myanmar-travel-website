@@ -90,10 +90,7 @@
                     <i class="fas fa-compass"></i>
                     <span>စတင်လေ့လာမည်</span>
                 </a>
-                <button id="watchVideo" class="btn-outline" data-key="headerButton2">
-                    <i class="fas fa-play"></i>
-                    <span>ဗီဒီယိုကြည့်မည်</span>
-                </button>
+                
             </div>
             
             <!-- Weather Widget -->
@@ -139,12 +136,9 @@
                 </div>
                 <div class="about-image fade-in-right">
                     <div class="image-container">
-                        <img src="images/yangon1.jpg" alt="Shwedagon Pagoda - Yangon">
-
-                        <div class="image-controls">
-                            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-                        </div>
+                        <img src="images/yangon1.jpg" alt="Bagan" id="mainImage" 
+                             onerror="this.src='https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        
                     </div>
                     <div class="image-caption">
                         <p data-key="imageCaption">ရွှေတိဂုံစေတီတော် - ရန်ကုန်</p>
@@ -161,55 +155,38 @@
                 <i class="fas fa-map-pin"></i>
                 <span>သွားရောက်သင့်သောနေရာများ</span>
             </h2>
-            <div class="destination-controls">
-                <button class="filter-btn active" data-filter="all" data-key="filterAll">အားလုံး</button>
-                <button class="filter-btn" data-filter="temple" data-key="filterTemples">စေတီပုထိုးများ</button>
-                <button class="filter-btn" data-filter="nature" data-key="filterNature">သဘာဝ</button>
-                <button class="filter-btn" data-filter="city" data-key="filterCities">မြို့ကြီးများ</button>
-            </div>
+            
             <div class="destination-grid">
                 <!-- Bagan Card -->
                 <div class="destination-card" data-category="temple">
                     <div class="destination-image">
-                        <img src="images/m1.jpg" alt="Bagan">
-                        <div class="destination-overlay">
-                            <span class="category-badge" data-key="filterTemples">စေတီပုထိုးများ</span>
-                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                        </div>
+                        <img src="images/m1.jpg" alt="Bagan"
+                            >
+                        
                     </div>
                     <div class="destination-info">
                         <h3 data-key="baganTitle">ပုဂံ</h3>
                         <p data-key="baganDesc">ကမ္ဘာ့အံ့ဖွယ်ရှေးဟောင်းသုတေသနနေရာတစ်ခုဖြစ်သော ပုဂံပြင်ပြင်တွင် ရှေးဟောင်းစေတီပုထိုး ၂,၀၀၀ ကျော်ကို လေ့လာပါ။</p>
-                        <div class="destination-meta">
-                            <span><i class="fas fa-clock"></i> <span data-key="baganDays">၃-၄ ရက်</span></span>
-                            <span><i class="fas fa-dollar-sign"></i> <span data-key="baganPrice">$$$</span></span>
-                        </div>
-                        <button class="btn-detail" data-key="viewDetails">
-                            <i class="fas fa-info-circle"></i>
-                            <span>အသေးစိတ်ကြည့်ရန်</span>
-                        </button>
+                        
+                       
                     </div>
                 </div>
 
                 <!-- Inle Lake Card -->
                 <div class="destination-card" data-category="nature">
                     <div class="destination-image">
-                        <img src="images/inle-01.jpg" alt="Inle Lake">
-                        <div class="destination-overlay">
-                            <span class="category-badge" data-key="filterNature">သဘာဝ</span>
-                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
-                        </div>
+                        <img src="images/inle-01.jpg" alt="Inle Lake"
+                             onerror="this.src='https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                      
                     </div>
                     <div class="destination-info">
                         <h3 data-key="inleTitle">အင်းလေးကန်</h3>
                         <p data-key="inleDesc">အင်းလေးကန်ပေါ်တွင် နေထိုင်ကြသော အင်းသားလူမျိုးတို့၏ ထူးခြားသောယဉ်ကျေးမှုကို လေ့လာပါ။ ရေပေါ်ခြံများနှင့် ခြေထောက်ဖြင့်လှော်ခတ်သော ငါးဖမ်းသမားများနှင့် ကျော်ကြားသည်။</p>
                         <div class="destination-meta">
-                            <span><i class="fas fa-clock"></i> <span data-key="inleDays">၂-၃ ရက်</span></span>
-                            <span><i class="fas fa-dollar-sign"></i> <span data-key="inlePrice">$$</span></span>
+                           
                         </div>
-                        <button class="btn-detail" data-key="viewDetails">
-                            <i class="fas fa-info-circle"></i>
-                            <span>အသေးစိတ်ကြည့်ရန်</span>
+                      
+                            
                         </button>
                     </div>
                 </div>
@@ -217,22 +194,20 @@
                 <!-- Yangon Card -->
                 <div class="destination-card" data-category="city">
                     <div class="destination-image">
-                        <img src="images/Yangon.jpg" alt="Yangon">
+                        <img src="images/Yangon.jpg" alt="Yangon"
+                             onerror="this.src='https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
                         <div class="destination-overlay">
                             <span class="category-badge" data-key="filterCities">မြို့ကြီးများ</span>
-                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                           
                         </div>
                     </div>
                     <div class="destination-info">
                         <h3 data-key="yangonTitle">ရန်ကုန်</h3>
                         <p data-key="yangonDesc">ကိုလိုနီခေတ်ဗိသုကာလက်ရာများ၊ စည်ကားသောဈေးများနှင့် ခမ်းနားထည်ဝါသော ရွှေတိဂုံစေတီတော်တို့ဖြင့် စည်ကားသောယခင်မြို့တော်ကို လေ့လာပါ။</p>
-                        <div class="destination-meta">
-                            <span><i class="fas fa-clock"></i> <span data-key="yangonDays">၂-၃ ရက်</span></span>
-                            <span><i class="fas fa-dollar-sign"></i> <span data-key="yangonPrice">$$</span></span>
-                        </div>
-                        <button class="btn-detail" data-key="viewDetails">
-                            <i class="fas fa-info-circle"></i>
-                            <span>အသေးစိတ်ကြည့်ရန်</span>
+                       
+                        
+                            
+                           
                         </button>
                     </div>
                 </div>
@@ -262,11 +237,9 @@
                         <div class="culture-icon">
                             <i class="fas fa-pagoda"></i>
                         </div>
-                        <h3 data-key="culture1Title">ဝိညာဉ်ရေးရာ</h3>
-                        <p data-key="culture1Desc">ရွှေစေတီပုထိုးများမှ နံနက်စောစော ဆွမ်းကပ်ခြင်းအခမ်းအနားများအထိ ဝိညာဉ်ရေးရာသည် မြန်မာနိုင်ငံ၏နေ့စဉ်ဘဝတွင် နက်ရှိုင်းစွာစိမ့်ဝင်နေပါသည်။</p>
-                        <button class="culture-more" data-key="learnMore">
-                            <span>ပိုမိုလေ့လာရန်</span>
-                        </button>
+                        <h3 data-key="culture1Title">ဘာသာရေးရာ</h3>
+                        <p data-key="culture1Desc">ရွှေစေတီပုထိုးများမှ နံနက်စောစော ဆွမ်းကပ်ခြင်းအခမ်းအနားများအထိ ဘာသာရေးရာသည် မြန်မာနိုင်ငံ၏နေ့စဉ်ဘဝတွင် နက်ရှိုင်းစွာစိမ့်ဝင်နေပါသည်။</p>
+                        
                     </div>
                     <div class="culture-item fade-in-up">
                         <div class="culture-icon">
@@ -274,9 +247,7 @@
                         </div>
                         <h3 data-key="culture2Title">အစားအစာ</h3>
                         <p data-key="culture2Desc">မြန်မာ့အစားအစာသည် အိမ်နီးချင်းနိုင်ငံများမှ အရသာများကို ဒေသခံပစ္စည်းများနှင့် ရောစပ်ထားခြင်းဖြစ်ပါသည်။</p>
-                        <button class="culture-more" data-key="learnMore">
-                            <span>ပိုမိုလေ့လာရန်</span>
-                        </button>
+                       
                     </div>
                     <div class="culture-item fade-in-up">
                         <div class="culture-icon">
@@ -284,9 +255,7 @@
                         </div>
                         <h3 data-key="culture3Title">ရိုးရာအဝတ်အစား</h3>
                         <p data-key="culture3Desc">လုံချည်ကို အမျိုးသား၊ အမျိုးသမီးနှစ်မျိုးလုံးက ၀တ်ဆင်ကြပြီး သနပ်ခါးကို အလှကုန်နှင့် နေလောင်ကာခရင်မ်အဖြစ် အသုံးပြုကြပါသည်။</p>
-                        <button class="culture-more" data-key="learnMore">
-                            <span>ပိုမိုလေ့လာရန်</span>
-                        </button>
+                        
                     </div>
                 </div>
             </div>
@@ -461,23 +430,10 @@
     </button>
 
     <!-- Video Modal -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/zLJCJeVdvks" 
-                        title="Myanmar Travel Video" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- JavaScript Files -->
     <script src="languages.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
-
